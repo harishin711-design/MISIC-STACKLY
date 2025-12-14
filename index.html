@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musico Stackly Instrument</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="site-nav">
+        <div class="logo">Musico Stackly Instrument</div>
+        <div class="nav-buttons">
+            <button class="nav-btn">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.5z"/></svg>
+                </span>
+                Home
+            </button>
+            <button class="nav-btn">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm.75 15h-1.5v-6h1.5v6zm0-8h-1.5V7h1.5v2z"/></svg>
+                </span>
+                About
+            </button>
+            <button class="nav-btn">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM7.2 13l.8-2h8.9a1 1 0 0 0 .95-.68l1.6-5H6.2L5 2H2v2h2l3.6 9.59L6.2 17H20v-2H7.2z"/></svg>
+                </span>
+                Cart
+            </button>
+            <button class="nav-btn">
+                <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2c-4 0-7 2-7 4v2h14v-2c0-2-3-4-7-4z"/></svg>
+                </span>
+                Account
+            </button>
+        </div>
+    </nav>
+
+    <section class="featured">
+        <div class="info">
+            <span class="tag">Featured Product</span>
+            <h1>Electric Guitar</h1>
+            <p class="brand">by Fender Stratocaster</p>
+            <p class="desc">
+                Professional-grade electric guitar with a classic tone and modern playability.
+                Perfect for rock, blues, and everything in between.
+            </p>
+            <div class="price-box">
+                <span class="price">₹18999.99</span>
+                <span class="old">₹19,199.99</span>
+                <span class="save">Save 25%</span>
+            </div>
+            <div class="btns">
+                <button class="add">Add to Cart</button>
+                <button class="view">View Details</button>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="src/guitar-acoustic.png" alt="Featured Guitar">
+        </div>
+    </section>
+
+    <div class="tabs">
+        <button class="active">All Instruments</button>
+        <button>Guitar/Bass</button>
+        <button>Wind Instruments</button>
+        <button>Strings</button>
+        <button>Drums/Percussion</button>
+    </div>
+
+    <section class="products">
+        <div class="card">
+            <span class="sale">Sale</span>
+            <img src="src/guitar-red.png" alt="Electric Guitar">
+            <h3>Electric Guitar</h3>
+            <p class="brand">Fender Stratocaster</p>
+            <div class="price-row">
+                <span class="price">₹21899.99</span>
+                <span class="old">₹26,199.99</span>
+            </div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="src/violin.png" alt="Les Paul">
+            <h3>Les Paul Standard</h3>
+            <p class="brand">Gibson</p>
+            <div class="price-row">
+                <span class="price">₹21,299.99</span>
+            </div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <span class="sale">Sale</span>
+            <img src="src/bass-blue.png" alt="Bass Guitar">
+            <h3>Jazz Bass</h3>
+            <p class="brand">Fender</p>
+            <div class="price-row">
+                <span class="price">₹18,749.99</span>
+                <span class="old">₹20,899.99</span>
+            </div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    </section>
+
+    <section class="animation">
+        <h2>Buy an Instrument. Create Memories</h2>
+        <!-- Option A: Local video file. Using the provided clip at src/aniclip.mp4 -->
+            <video class="anim-video" autoplay muted loop playsinline>
+                <source src="src/aniclip.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="ad-overlay" aria-hidden="true">Advertisement</div>
+
+            <!-- Promotional overlay text (clickable) -->
+            <div class="anim-overlay" role="button" tabindex="0" aria-pressed="false" aria-label="Promotional message">
+                <div class="anim-text">Turn Noise into Music — Sale Starts Now</div>
+            </div>
+
+        <!-- Option B: YouTube embed (uncomment and replace VIDEO_ID) -->
+        <!--
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Animation clip" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        -->
+        </section>
+
+        <script>
+            (function(){
+                const overlay = document.querySelector('.anim-overlay');
+                const textEl = overlay && overlay.querySelector('.anim-text');
+                if (!overlay || !textEl) return;
+
+                const phrases = [
+                    'Turn Noise into Music — Sale Starts Now',
+                    'Your Sound Deserves the Right Instrument',
+                    'Feel the Rhythm. Own the Instrument'
+                ];
+                let idx = 0;
+
+                function showNext(){
+                    idx = (idx + 1) % phrases.length;
+                    textEl.classList.add('pulse');
+                    setTimeout(()=> textEl.classList.remove('pulse'), 220);
+                    textEl.textContent = phrases[idx];
+                    overlay.setAttribute('aria-pressed', String(idx !== 0));
+                }
+
+                overlay.addEventListener('click', showNext);
+                overlay.addEventListener('keydown', (e)=>{
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showNext(); }
+                });
+            })();
+        </script>
+
+</body>
+</html>

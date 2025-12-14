@@ -1,0 +1,66 @@
+body{margin:0;font-family:Arial;background:#151515;color:#fff}
+.site-nav{display:flex;justify-content:space-between;align-items:center;padding:14px 40px;background:#0d0d0d;border-bottom:1px solid #222}
+.site-nav .logo{font-weight:700;font-size:18px}
+.site-nav .nav-buttons{display:flex;gap:10px}
+.site-nav .nav-btn{background:transparent;border:1px solid #333;color:#fff;padding:8px 12px;border-radius:8px;cursor:pointer}
+.site-nav .nav-btn:hover{background:#ff2a5c;border-color:#ff2a5c;color:#fff}
+
+.nav-btn .icon{display:inline-block;width:16px;height:16px;vertical-align:middle;margin-right:8px}
+.nav-btn .icon svg{width:100%;height:100%;fill:currentColor}
+.nav-btn{display:inline-flex;align-items:center;gap:6px}
+.featured{display:flex;justify-content:space-between;padding:50px;margin:40px;border-radius:16px;background:#1e1e1e}
+.tag{background:#ff2a5c;padding:6px 12px;border-radius:6px;font-size:14px}
+.featured h1{font-size:36px;margin:15px 0}
+.brand{opacity:.7}
+.desc{margin:15px 0;opacity:.8}
+.price-box{margin:15px 0}
+.price-box .price{font-size:28px;margin-right:10px}
+.old{text-decoration:line-through;color:#888;margin-right:10px}
+.save{color:#ff2a5c}
+.btns button{padding:12px 20px;border:0;border-radius:6px;font-size:15px;margin-right:12px;cursor:pointer}
+.add{background:#ff2a5c;color:#fff}
+.view{background:#333;color:#fff}
+.image-box img{width:300px;border-radius:10px}
+
+/* floating animation for featured image */
+.image-box img{animation:float 4s ease-in-out infinite;will-change:transform}
+
+@keyframes float{
+	0%{transform:translateY(0)}
+	50%{transform:translateY(-12px)}
+ 100%{transform:translateY(0)}
+}
+
+/* Animation video styles */
+.animation{padding:40px;display:flex;flex-direction:column;align-items:center;gap:12px;position:relative}
+.animation h2{margin:0;color:#ff2a5c;font-size:20px;font-weight:700}
+.anim-video{width:480px;max-width:90%;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.6);background:#000}
+.anim-video:hover{transform:scale(1.01);transition:transform .25s ease}
+.video-embed iframe{width:800px;max-width:90%;height:450px;border-radius:12px;border:0}
+
+/* advertisement badge */
+.ad-overlay{position:absolute;top:16px;left:16px;background:rgba(0,0,0,0.6);color:#fff;padding:6px 10px;border-radius:8px;font-size:12px}
+
+/* fullscreen video styling */
+.anim-video:fullscreen, .anim-video:-webkit-full-screen{width:100vw;height:100vh;object-fit:cover;border-radius:0}
+.anim-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:auto;z-index:3}
+.anim-text{color:#fff;cursor:pointer;font-weight:700;padding:12px 18px;border-radius:10px;background:linear-gradient(90deg,rgba(0,0,0,0.45),rgba(0,0,0,0.25));text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.6);font-size:clamp(18px,4vw,34px);text-shadow:0 4px 18px rgba(0,0,0,0.6)}
+
+@keyframes animTextFloat{
+ 0%{transform:translateY(0);opacity:1}
+ 50%{transform:translateY(-8px);opacity:0.98}
+ 100%{transform:translateY(0);opacity:1}
+}
+.anim-text{animation:animTextFloat 4s ease-in-out infinite}
+
+.anim-overlay:focus{outline:2px solid rgba(255,42,92,0.5);outline-offset:6px;border-radius:12px}
+.anim-text.pulse{transform:translateY(-6px);transition:transform .18s ease}
+.tabs{display:flex;gap:20px;padding:20px 40px}
+.tabs button{background:#222;padding:10px 18px;border:0;color:#fff;border-radius:6px;cursor:pointer}
+.tabs .active{background:#ff2a5c}
+.products{padding:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.card{background:#1e1e1e;padding:20px;border-radius:12px;text-align:center;position:relative}
+.card img{width:75%;margin-bottom:10px}
+.sale{background:#ff2a5c;padding:6px 10px;border-radius:6px;position:absolute;top:15px;left:15px;font-size:12px}
+.price-row{margin:10px 0}
+.cart-btn{padding:12px;width:100%;background:#333;border:0;border-radius:6px;color:#fff;cursor:pointer}
