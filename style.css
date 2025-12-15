@@ -35,7 +35,8 @@ body{margin:0;font-family:Arial;background:#151515;color:#fff}
 .animation{padding:40px;display:flex;flex-direction:column;align-items:center;gap:12px;position:relative}
 .animation h2{margin:0;color:#ff2a5c;font-size:20px;font-weight:700}
 .anim-video{width:480px;max-width:90%;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.6);background:#000}
-.anim-video:hover{transform:scale(1.01);transition:transform .25s ease}
+.anim-video{transition:transform .25s ease}
+.anim-video:hover{transform:scale(1.01)}
 .video-embed iframe{width:800px;max-width:90%;height:450px;border-radius:12px;border:0}
 
 /* advertisement badge */
@@ -64,3 +65,80 @@ body{margin:0;font-family:Arial;background:#151515;color:#fff}
 .sale{background:#ff2a5c;padding:6px 10px;border-radius:6px;position:absolute;top:15px;left:15px;font-size:12px}
 .price-row{margin:10px 0}
 .cart-btn{padding:12px;width:100%;background:#333;border:0;border-radius:6px;color:#fff;cursor:pointer}
+.video-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.anim-video{
+    width:480px;
+    max-width:90%;
+    border-radius:12px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.6);
+    background:#000;
+    transition:transform .25s ease;   
+}
+
+.anim-video:hover{
+    transform:scale(1.01);           
+}
+.music-features{
+  background:#151515;
+  padding:60px 40px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  text-align:center;
+}
+
+.feature-card{
+  color:#fff;
+  padding:20px;
+}
+
+.feature-card .icon{
+  font-size:48px;
+  color:#2de2a6;
+  margin-bottom:14px;
+}
+
+.feature-card h3{
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.feature-card span{
+  display:block;
+  width:50px;
+  height:3px;
+  background:#ff2a5c;
+  margin:12px auto 18px;
+  border-radius:10px;
+}
+
+.feature-card p{
+  font-size:14px;
+  line-height:1.6;
+  color:#cbd5e1;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .music-features{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:500px){
+  .music-features{
+    grid-template-columns:1fr;
+  }
+}
+
+
+
+
+
+
