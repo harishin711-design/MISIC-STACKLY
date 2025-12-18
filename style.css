@@ -1,3 +1,7 @@
+*{
+  box-sizing:border-box;
+}
+
 body{margin:0;font-family:Arial;background:#151515;color:#fff}
 .site-nav{display:flex;justify-content:space-between;align-items:center;padding:14px 40px;background:#0d0d0d;border-bottom:1px solid #222}
 .site-nav .logo{font-weight:700;font-size:18px}
@@ -142,6 +146,26 @@ body{margin:0;font-family:Arial;background:#151515;color:#fff}
   background: #151515;
   text-align: center;
 }
+/* PRODUCTS – RESPONSIVE FIX */
+@media (max-width: 900px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+}
+
+@media (max-width:900px){
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:550px){
+  .products{
+    grid-template-columns:1fr;
+  }
+}
+
 
 .brands h2 {
   letter-spacing: 4px;
@@ -189,16 +213,89 @@ body{margin:0;font-family:Arial;background:#151515;color:#fff}
 .logo-slider:hover .logo-track {
   animation-play-state: paused;
 }
-animation: scroll 15s linear infinite; /* faster */
-animation: scroll 30s linear infinite; /* slower */
 
-animation-direction: reverse;
 
-@media (max-width: 600px) {
-  .logo-track img {
-    width: 120px;
-    margin: 0 20px;
+@media (max-width:600px){
+  .logo-track img{
+    width:120px;
+    margin:0 20px;
   }
 }
+
+@media (max-width:600px){
+  .logo-track{
+    width:calc(160px * 12);
+  }
+}
+
+@media (max-width: 360px) {
+  .featured h1 {
+    font-size: 22px;
+  }
+
+  .price-box .price {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 20px;
+  }
+
+  .site-nav .nav-buttons {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .site-nav .nav-btn {
+    flex: 1 1 48%;
+    justify-content: center;
+  }
+}
+@media (max-width:900px){
+  .featured{
+    flex-direction:column;
+    padding:30px;
+    margin:20px;
+    gap:30px;
+  }
+
+  .image-box img{
+    width:100%;
+    max-width:320px;
+    margin:auto;
+  }
+}
+
+
+  .featured h1 {
+    font-size: 28px;
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btns button {
+    width: 100%;
+  }
+@media (max-width: 768px) {
+  .tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .tabs button {
+    flex-shrink: 0;
+  }
+}
+
 
 
